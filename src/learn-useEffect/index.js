@@ -4,6 +4,10 @@ export default function Index() {
   const [count, setCount] = useState(0);
   const [data, setData] = useState([]);
   //dijalankan 1 kali
+  
+  useEffect(() => {
+    alert("profile telah ditampilkan!")
+  }, [])
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/todos")
       .then((response) => response.json())
